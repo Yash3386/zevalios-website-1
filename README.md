@@ -1,3 +1,1 @@
-# Zevalios regenerated static website
-
-Deploy the folder as a static site. Netlify form handling is configured for the homepage contact form.
+Zevalios updated website package with revised homepage, service pages, legal pages, new favicon and premium imagery.
