@@ -1,74 +1,60 @@
 # Zevalios website
 
-Production-ready static website for **zevalios.com**. It uses plain HTML, CSS and minimal JavaScript, so there is no build dependency and it can be deployed immediately to Netlify.
+Original static website for **zevalios.com**, inspired by the commercial structure of the supplied Elite X reference but rebuilt from scratch without Webflow, ecommerce, external template assets or fictional proof.
 
 ## Included
 
-- Home, Services, Approach, About, Contact and Privacy pages
+- Home, Services, Approach, Founder, Contact and Privacy pages
+- Founder portrait and enhanced transparent Zevalios brand assets
+- HTML-rendered ZEVALIOS wordmark for sharper on-screen text
+- Netlify Forms with honeypot protection
 - Responsive mobile navigation
-- Netlify contact form with honeypot protection
-- Success page and custom 404 page
-- Sitemap, robots file, social metadata and structured data
-- Security headers and canonical redirect from `www` to the apex domain
-- Original Zevalios brand assets supplied by the owner
+- Favicon, Apple touch icon and web manifest
+- Search metadata, sitemap and robots file
+- Security headers and `www` redirect
+- No build process, database, tracker, cookie banner or external font request
 
-## Fastest deployment today
+## Email identity
 
-1. Create a Netlify account.
-2. Choose **Add new project → Deploy manually**.
-3. Drag the contents of this folder, or drag the ZIP after extracting it.
-4. Netlify will issue a temporary `*.netlify.app` address.
-5. Open **Forms** in the Netlify dashboard and verify that the `fit-call` form was detected.
-6. Set form-notification emails to `yash@zevalios.com` after that mailbox is active.
-7. Add `zevalios.com` under **Domain management** and follow Netlify's DNS instructions.
-8. Set `zevalios.com` as the primary domain and verify HTTPS.
+- Founder: `yash@zevalios.com`
+- General: `info@zevalios.com`
 
-## Better long-term deployment
+There are no references to `yr@zevalios.com` or `hello@zevalios.com`.
 
-1. Create a private GitHub repository.
-2. Upload every file in this folder to the repository root.
-3. In Netlify, choose **Import an existing project** and connect the repository.
-4. Build command: leave empty.
-5. Publish directory: `.`
-6. Every approved GitHub change will redeploy automatically.
+## GitHub update
 
-## Email identity used by the site
+1. Extract this ZIP.
+2. Open the `Zevalios/zevalios-website` repository.
+3. Delete obsolete files from the old version if necessary.
+4. Upload **the contents of this folder** to the repository root.
+5. Commit directly to `main`.
+6. Suggested commit message: `Replace website with Elite-inspired original redesign`.
 
-- Primary founder mailbox: `yash@zevalios.com`
-- Public alias: `hello@zevalios.com`
-- Privacy alias: `privacy@zevalios.com`
-- Suggested additional aliases: `invoices@zevalios.com`, `dmarc@zevalios.com`
+## Netlify settings
 
-Change all occurrences before launch if another address is selected:
+- Branch: `main`
+- Base directory: blank
+- Build command: blank
+- Publish directory: `.`
+- Functions directory: blank
 
-```bash
-find . -type f -name "*.html" -o -name "*.md" | xargs sed -i 's/yash@zevalios.com/NEW@zevalios.com/g'
-```
+Netlify should redeploy automatically after the GitHub commit.
 
-## Required pre-publication checks
+## Form notifications
 
-- Confirm the email address and telephone number.
-- Review the privacy notice against the final provider configuration and retention practice.
-- Confirm that publishing the founder operating-impact example is authorised and accurately worded.
-- Test the contact form on the Netlify production URL.
-- Test desktop, iPhone and Android layouts.
-- Confirm Google Workspace SPF, DKIM and DMARC before outreach.
-- Remove `assets/pitch-reference.png` from the public deployment if it is not needed; it is included only as an internal design reference and is not linked from any page.
+After deployment:
 
-## No third-party trackers
+1. Open Netlify.
+2. Open **Forms**.
+3. Select the detected form.
+4. Add a form notification to `yash@zevalios.com` or `info@zevalios.com`.
+5. Submit a live test and verify delivery.
 
-The website intentionally contains no Google Analytics, advertising pixel, external font, embedded social feed or cookie banner. Essential Netlify infrastructure may still process technical information required to serve and secure the website.
+## Before connecting the domain
 
-## Favicon assets
-
-The website includes a favicon set derived from the Zevalios horse–Z logo:
-
-- `assets/favicon.ico`
-- `assets/favicon-16.png`
-- `assets/favicon-32.png`
-- `assets/favicon-48.png`
-- `assets/apple-touch-icon.png`
-- `assets/icon-192.png`
-- `assets/icon-512.png`
-
-The required `<link>` elements are already included in every HTML page.
+- Review every page on desktop and iPhone.
+- Confirm both email addresses receive messages.
+- Confirm the phone number.
+- Legally review the privacy notice.
+- Confirm the founder process-improvement example is accurately stated.
+- Test the live contact form.
