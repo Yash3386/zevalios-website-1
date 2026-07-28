@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="260" height="90" viewBox="0 0 260 90" fill="none">
-  <rect width="260" height="90" fill="none"/>
-  <path d="M18 66 C38 52, 46 37, 57 24 C61 19, 69 20, 68 28 C66 39, 57 47, 54 58 C52 67, 61 71, 68 62 C78 48, 76 31, 93 24 C104 19, 113 28, 107 39 C100 52, 94 63, 97 68 C101 75, 114 71, 121 63 C133 50, 127 29, 148 21 C165 14, 172 31, 162 44 C154 54, 147 63, 151 69 C155 74, 166 71, 174 64 C188 51, 186 29, 205 23 C220 19, 233 28, 226 40 C220 49, 213 58, 214 67" stroke="#D6B46D" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M172 70 C196 76, 220 76, 243 67" stroke="#D6B46D" stroke-width="3" stroke-linecap="round"/>
-  <text x="22" y="63" font-family="Brush Script MT, Lucida Handwriting, cursive" font-size="44" fill="#D6B46D">YRam</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120"><path d="M18 82 C46 38,66 28,76 44 C84 57,60 76,70 86 C84 99,104 70,118 51 C132 31,153 34,151 52 C149 72,126 85,140 91 C158 99,177 69,190 53 C206 32,228 40,222 59 C217 75,204 86,217 91 C236 99,258 68,276 52 C293 37,318 43,315 62 C312 78,300 87,316 91" fill="none" stroke="#c8a25d" stroke-width="5" stroke-linecap="round"/><text x="30" y="86" fill="#c8a25d" font-size="54" font-family="Brush Script MT,Segoe Script,cursive">YRam</text><path d="M200 103 C248 108,295 106,340 96" fill="none" stroke="#c8a25d" stroke-width="3" stroke-linecap="round"/></svg>
