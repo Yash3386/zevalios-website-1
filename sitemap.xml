@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zevalios.com/</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/services</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/approach</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/about</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/contact</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/privacy</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/cookies</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/terms</loc><lastmod>2026-07-28</lastmod></url>
-  <url><loc>https://zevalios.com/disclaimer</loc><lastmod>2026-07-28</lastmod></url>
+  <url><loc>https://zevalios.com/</loc></url>
+  <url><loc>https://zevalios.com/services.html</loc></url>
+  <url><loc>https://zevalios.com/approach.html</loc></url>
+  <url><loc>https://zevalios.com/about.html</loc></url>
+  <url><loc>https://zevalios.com/contact.html</loc></url>
+  <url><loc>https://zevalios.com/services/commercial-operations-workflow.html</loc></url>
+  <url><loc>https://zevalios.com/services/contract-to-cash.html</loc></url>
+  <url><loc>https://zevalios.com/services/cross-border-commercial.html</loc></url>
+  <url><loc>https://zevalios.com/services/documentation-deal-coordination.html</loc></url>
+  <url><loc>https://zevalios.com/privacy.html</loc></url>
+  <url><loc>https://zevalios.com/technology-storage.html</loc></url>
+  <url><loc>https://zevalios.com/terms.html</loc></url>
+  <url><loc>https://zevalios.com/disclaimer.html</loc></url>
 </urlset>
