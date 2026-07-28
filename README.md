@@ -1,1 +1,1 @@
-Modified directly from the supplied HTML. Upload index.html, netlify.toml and the assets folder to the repository root.
+Zevalios updated website package with revised homepage, service pages, legal pages, new favicon and premium imagery.
