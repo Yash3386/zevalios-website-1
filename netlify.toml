@@ -1,9 +1,37 @@
 [build]
   publish = "."
+  command = ""
 
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'self'; base-uri 'self'"
+
+[[redirects]]
+  from = "/services/cross-border-commercial-coordination/*"
+  to = "/services/cross-border-commercial-services/"
+  status = 301
+[[redirects]]
+  from = "/services/contract-to-cash-workflow-optimisation/*"
+  to = "/services/contract-to-cash-revenue-control/"
+  status = 301
+[[redirects]]
+  from = "/services/documentation-controls-governance-packs/*"
+  to = "/services/commercial-documentation-deal-coordination/"
+  status = 301
+[[redirects]]
+  from = "/privacy/*"
+  to = "/privacy-policy/"
+  status = 301
+[[redirects]]
+  from = "/cookies/*"
+  to = "/cookies-policy/"
+  status = 301
+[[redirects]]
+  from = "/terms/*"
+  to = "/terms-and-conditions/"
+  status = 301

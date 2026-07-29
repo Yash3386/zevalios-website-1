@@ -1,95 +1,31 @@
 (function(){
-  "use strict";
-
-  var root = document.documentElement;
-  var THEME_KEY = "zevalios-theme";
-
-  /* ---------- Theme toggle (day / night) ---------- */
-  function applyTheme(theme){
-    root.setAttribute("data-theme", theme);
-    var toggle = document.getElementById("themeToggle");
-    if (toggle) toggle.setAttribute("aria-pressed", theme === "light");
-  }
-
-  function initTheme(){
-    var stored = null;
-    try { stored = localStorage.getItem(THEME_KEY); } catch(e) {}
-
-    if (stored === "light" || stored === "dark") {
-      applyTheme(stored);
-    } else {
-      var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-      applyTheme(prefersLight ? "light" : "dark");
-    }
-  }
-
-  function toggleTheme(){
-    var current = root.getAttribute("data-theme") === "light" ? "light" : "dark";
-    var next = current === "light" ? "dark" : "light";
-    applyTheme(next);
-    try { localStorage.setItem(THEME_KEY, next); } catch(e) {}
-  }
-
-  initTheme();
-
-  document.addEventListener("DOMContentLoaded", function(){
-    var toggle = document.getElementById("themeToggle");
-    if (toggle) toggle.addEventListener("click", toggleTheme);
-
-    /* ---------- Nav scroll state ---------- */
-    var nav = document.getElementById("siteNav");
-    var scrollTopBtn = document.getElementById("scrollTop");
-    function onScroll(){
-      var scrolled = window.scrollY > 12;
-      if (nav) nav.classList.toggle("is-scrolled", scrolled);
-      if (scrollTopBtn) scrollTopBtn.classList.toggle("is-visible", window.scrollY > 500);
-    }
-    document.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-
-    if (scrollTopBtn){
-      scrollTopBtn.addEventListener("click", function(){
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    }
-
-    /* ---------- Mobile menu ---------- */
-    var hamburger = document.getElementById("hamburger");
-    var navLinks = document.getElementById("navLinks");
-    if (hamburger && navLinks){
-      hamburger.addEventListener("click", function(){
-        var isOpen = navLinks.classList.toggle("is-open");
-        hamburger.classList.toggle("is-open", isOpen);
-        hamburger.setAttribute("aria-expanded", isOpen);
-      });
-      navLinks.querySelectorAll("a").forEach(function(link){
-        link.addEventListener("click", function(){
-          navLinks.classList.remove("is-open");
-          hamburger.classList.remove("is-open");
-          hamburger.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
-
-    /* ---------- Footer year ---------- */
-    var yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    /* ---------- Contact form (Netlify Forms native submit; friendly fallback message) ---------- */
-    var form = document.querySelector(".contact__form");
-    var note = document.getElementById("formNote");
-    if (form && note){
-      form.addEventListener("submit", function(e){
-        // Let Netlify handle real submissions (form has data-netlify="true").
-        // If this file is opened outside Netlify (e.g. plain preview), avoid
-        // navigating to a 404 and show a friendly inline message instead.
-        var isNetlifyHost = /\.netlify\.app$/.test(window.location.hostname) || window.location.hostname.indexOf("netlify") !== -1;
-        if (!isNetlifyHost && window.location.protocol !== "https:" ) {
-          e.preventDefault();
-          note.textContent = "Thanks — this form will send once the site is live on Netlify.";
-          form.reset();
-        }
-      });
-    }
-  });
+"use strict";
+var root=document.documentElement;
+var THEME_KEY="zevalios-theme";
+var COOKIE_KEY="zevalios-cookie-choice";
+function safeGet(k){try{return localStorage.getItem(k);}catch(e){return null;}}
+function safeSet(k,v){try{localStorage.setItem(k,v);}catch(e){}}
+function applyTheme(theme){root.setAttribute("data-theme",theme);var t=document.getElementById("themeToggle");if(t)t.setAttribute("aria-pressed",String(theme==="light"));}
+function initTheme(){var s=safeGet(THEME_KEY);if(s==="light"||s==="dark")applyTheme(s);else applyTheme(window.matchMedia&&window.matchMedia("(prefers-color-scheme: light)").matches?"light":"dark");}
+function toggleTheme(){var n=root.getAttribute("data-theme")==="light"?"dark":"light";applyTheme(n);safeSet(THEME_KEY,n);}
+initTheme();
+document.addEventListener("DOMContentLoaded",function(){
+ var toggle=document.getElementById("themeToggle");if(toggle)toggle.addEventListener("click",toggleTheme);
+ var nav=document.getElementById("siteNav"),topBtn=document.getElementById("scrollTop");
+ function onScroll(){if(nav)nav.classList.toggle("is-scrolled",window.scrollY>12);if(topBtn)topBtn.classList.toggle("is-visible",window.scrollY>500);}document.addEventListener("scroll",onScroll,{passive:true});onScroll();
+ if(topBtn)topBtn.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+ var burger=document.getElementById("hamburger"),links=document.getElementById("navLinks");if(burger&&links){burger.addEventListener("click",function(){var o=links.classList.toggle("is-open");burger.classList.toggle("is-open",o);burger.setAttribute("aria-expanded",String(o));});links.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){links.classList.remove("is-open");burger.classList.remove("is-open");burger.setAttribute("aria-expanded","false");});});}
+ document.querySelectorAll("#year").forEach(function(el){el.textContent=new Date().getFullYear();});
+ var banner=document.getElementById("cookieBanner"),modal=document.getElementById("cookieModal");
+ function openModal(){if(modal){modal.hidden=false;document.body.style.overflow="hidden";}}
+ function closeModal(){if(modal){modal.hidden=true;document.body.style.overflow="";}}
+ function saveChoice(v){safeSet(COOKIE_KEY,JSON.stringify({choice:v,expires:Date.now()+15552000000}));if(banner)banner.hidden=true;closeModal();}
+ var raw=safeGet(COOKIE_KEY),valid=false;if(raw){try{var o=JSON.parse(raw);valid=o&&o.expires>Date.now();}catch(e){}}if(banner&&!valid)banner.hidden=false;
+ document.querySelectorAll("[data-cookie-accept]").forEach(function(b){b.addEventListener("click",function(){saveChoice("necessary");});});
+ document.querySelectorAll("[data-cookie-reject]").forEach(function(b){b.addEventListener("click",function(){saveChoice("rejected-optional");});});
+ document.querySelectorAll("[data-cookie-save]").forEach(function(b){b.addEventListener("click",function(){saveChoice("necessary");});});
+ document.querySelectorAll("[data-cookie-settings]").forEach(function(b){b.addEventListener("click",openModal);});
+ document.querySelectorAll("[data-cookie-close]").forEach(function(b){b.addEventListener("click",closeModal);});
+ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeModal();});
+});
 })();
