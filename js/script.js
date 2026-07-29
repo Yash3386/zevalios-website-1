@@ -57,6 +57,17 @@ document.addEventListener("DOMContentLoaded",function(){
 
   document.querySelectorAll("#year").forEach(function(el){el.textContent=new Date().getFullYear();});
 
+  document.querySelectorAll("[data-scroll-contact]").forEach(function(link){
+    link.addEventListener("click",function(event){
+      var target=document.getElementById("contact");
+      if(target){
+        event.preventDefault();
+        target.scrollIntoView({behavior:"smooth",block:"start"});
+        if(history.replaceState)history.replaceState(null,"","#contact");
+      }
+    });
+  });
+
   var banner=document.getElementById("cookieBanner");
   var modal=document.getElementById("cookieModal");
   function openModal(){

@@ -729,3 +729,59 @@ html[data-theme="light"] .hero__watermark--embossed{opacity:.72;filter:drop-shad
 /* Prevent intrinsic form widths from forcing horizontal overflow on very small screens. */
 .contact,.contact>*{min-width:0;}
 .contact__form input,.contact__form textarea,.contact__form select{min-width:0;max-width:100%;}
+
+
+/* 2026-07 final controlled refinements */
+.nav__brand{gap:6px;}
+.nav__mark{width:48px;height:40px;object-fit:contain;object-position:center;}
+.hero__watermark--embossed{top:calc(var(--nav-h) + 18px);transform:translateY(14px);}
+
+.footer__brand-lockup{display:flex;align-items:center;gap:10px;width:max-content;max-width:100%;margin-bottom:14px;}
+.footer__brand-mark{width:58px;height:52px;object-fit:contain;filter:drop-shadow(-1px -1px 0 rgba(255,248,216,.18)) drop-shadow(4px 6px 8px rgba(0,0,0,.45));}
+.footer__brand-text{display:flex;flex-direction:column;line-height:1.15;}
+.footer__brand-text strong{font-family:var(--font-display);font-size:22px;letter-spacing:.075em;color:#f4efe2;}
+.footer__brand-text span{font-size:8.5px;letter-spacing:.105em;text-transform:uppercase;color:#b7bfd4;}
+.footer__brand-text em{font-family:var(--font-display);font-size:11px;font-style:italic;color:var(--gold);margin-top:5px;}
+
+.founder--top-aligned{grid-template-columns:260px 1fr;align-items:start;gap:46px;}
+.founder--top-aligned .founder__media--portrait{align-self:start;max-width:260px;margin-top:0;}
+.founder--top-aligned .founder__media--portrait img{height:340px;object-position:center bottom;}
+.founder-proof-grid{grid-template-columns:1fr 1fr;align-items:start;}
+.founder-proof-grid .stat-card{margin-top:0;}
+.proof-card--compact{padding:18px 20px;align-self:start;}
+.proof-card--compact strong{font-size:17px;margin-bottom:6px;}
+.proof-card--compact p{font-size:13px;line-height:1.45;}
+
+.cta-banner__actions{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;}
+.evidence-card__source a{color:inherit;text-decoration:underline;text-underline-offset:3px;}
+
+/* Justify substantial prose on wider screens only. Narrow cards and mobile text remain left-aligned for readability. */
+@media (min-width: 760px){
+  main .section__sub,
+  main .founder__bio,
+  main .legal-content p,
+  main .service-detail-grid p,
+  main .service-outcome-layout p,
+  main .interconnected p,
+  main .evidence-card p,
+  main .followup-note p,
+  main .promise-grid span,
+  main .contact__info p,
+  .footer__identity>p,
+  .footer__bottom p{ text-align:justify; text-justify:inter-word; hyphens:auto; }
+}
+
+@media (max-width: 900px){
+  .founder--top-aligned{grid-template-columns:220px 1fr;gap:34px;}
+  .founder--top-aligned .founder__media--portrait{max-width:220px;}
+  .founder--top-aligned .founder__media--portrait img{height:300px;}
+}
+@media (max-width: 760px){
+  .founder--top-aligned{grid-template-columns:1fr;}
+  .founder--top-aligned .founder__media--portrait{max-width:210px;margin:0;}
+  .founder--top-aligned .founder__media--portrait img{height:285px;}
+  .founder-proof-grid{grid-template-columns:1fr;}
+  .nav__mark{width:42px;height:36px;}
+  .footer__brand-mark{width:50px;height:46px;}
+  .footer__brand-text strong{font-size:19px;}
+}

@@ -25,3 +25,11 @@ Upload the contents of this folder to the root of a GitHub repository and connec
 
 ## Important
 Review the legal pages, controller identity, public contact details and business-address disclosures when the final legal entity and service-provider configuration are confirmed.
+
+
+## Final additions
+- Approved embossed Z brand mark and supplied favicon/social assets used throughout.
+- Founder signature replaced with the supplied signature asset.
+- Downloadable brochure available at `/Zevalios_Brochure.pdf`.
+- Private analytics should be enabled in the authenticated Netlify dashboard; see `NETLIFY_ANALYTICS_SETUP.md`.
+- No client-side analytics script or analytics cookies are included.

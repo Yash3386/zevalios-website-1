@@ -1,41 +1,15 @@
-ZEVALIOS — FINAL REVISED PACKAGE
+FINAL CONTROLLED REVISION
 
-CONTENT AND POSITIONING
-1. Retains five distinct, equally important service lines.
-2. Clarifies that each service can be engaged on its own, several can be combined, or all five can form an integrated intervention.
-3. Broadens the explanation of interacting commercial problems beyond workflow failure and revenue leakage alone.
-4. Adds a clear distinction between:
-   - Commercial Documentation & Deal Coordination: matter-, transaction- or workstream-specific structure; and
-   - Templates, Registers & Operating Tools: reusable operating infrastructure.
-
-METHOD
-5. Restores Diagnose → Redesign → Implement → Verify as the four core stages.
-6. Presents follow-up as defined review checkpoints that may be included in scope or commissioned separately. This avoids suggesting an open-ended retainer while preserving post-implementation support.
-
-FOUNDER CREDIBILITY
-7. Replaces “Why me” with “Founder experience”.
-8. Reduces the founder narrative from four long paragraphs to three concise paragraphs.
-9. Retains the strongest evidence:
-   - more than seven years of corporate, commercial and legal experience;
-   - leadership of teams and cross-functional workstreams;
-   - high-pressure crisis-management work alongside the CEO, CFO and COO;
-   - more than €120 million in international investment activity;
-   - primary responsibility for legal workstreams;
-   - direct contribution to corporate, finance and operational execution;
-   - process, risk, compliance, training, automation and operating-tool experience;
-   - the internal efficiency example of 2 people / 4 days reduced to 1 person / half a day.
-10. Shortens the founder-led delivery statement so it signals senior involvement without implying limited capacity.
-
-EVIDENCE AND PRIVACY
-12. Keeps the European Commission late-payment context, clearly attributed and qualified.
-13. Simplifies the cookie popup into an informational essential-storage notice because no analytics or advertising cookies are active.
-14. Updates the Cookies Policy and browser-storage key accordingly.
-
-TECHNICAL
-15. Optimises the hero and founder images for faster loading without changing their displayed composition.
-16. Reduces the complete site package from approximately 12 MB to approximately 2.6 MB.
-17. Adds a web manifest and noindex directives to the success and 404 pages.
-18. Confirms zero missing internal links or assets, zero duplicate IDs, zero images without alternative text and valid JavaScript/manifest syntax.
-
-EVIDENCE LICENSING UPDATE
-Removed the privately published consultancy statistic from the commercial website. The homepage now retains one attributed European Commission statistic and pairs it with an original Zevalios operating insight.
+- Re-aligned and reduced founder portrait.
+- Replaced site marks, favicon set and social preview with the approved Z assets.
+- Replaced signature with the supplied signature file.
+- Reordered client outcomes so revenue control and cash conversion appears first.
+- Compacted and aligned the cross-functional coordination proof card.
+- Fixed the pre-contact “Discuss the requirement” link with a robust scroll handler.
+- Changed privacy contact to privacy@zevalios.com.
+- Generalised the legal boundary: Zevalios is not a law firm in any jurisdiction and does not provide legal advice or reserved legal services.
+- Added downloadable Zevalios brochure.
+- Added privacy-aware Netlify Web Analytics disclosures and private-dashboard setup instructions.
+- Did not add the McKinsey-derived 30–40% statement; replaced it with official UK Government guidance on metadata reducing search time.
+- Retained the attributed European Commission statistic and added a no-endorsement clarification.
+- Applied desktop-only justification to substantial prose while retaining left alignment on mobile and in compact interface text.
