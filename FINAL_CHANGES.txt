@@ -27,7 +27,6 @@ FOUNDER CREDIBILITY
 10. Shortens the founder-led delivery statement so it signals senior involvement without implying limited capacity.
 
 EVIDENCE AND PRIVACY
-11. Replaces the weaker revenue-leakage estimate with a broader McKinsey finding on time spent searching for data when no clear inventory exists.
 12. Keeps the European Commission late-payment context, clearly attributed and qualified.
 13. Simplifies the cookie popup into an informational essential-storage notice because no analytics or advertising cookies are active.
 14. Updates the Cookies Policy and browser-storage key accordingly.
@@ -37,3 +36,6 @@ TECHNICAL
 16. Reduces the complete site package from approximately 12 MB to approximately 2.6 MB.
 17. Adds a web manifest and noindex directives to the success and 404 pages.
 18. Confirms zero missing internal links or assets, zero duplicate IDs, zero images without alternative text and valid JavaScript/manifest syntax.
+
+EVIDENCE LICENSING UPDATE
+Removed the privately published consultancy statistic from the commercial website. The homepage now retains one attributed European Commission statistic and pairs it with an original Zevalios operating insight.
